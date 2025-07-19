@@ -1,0 +1,36 @@
+.clock-tooltip {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 10000;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.clock-tooltip.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.clock-tooltip .time {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 2px;
+    font-family: 'Courier New', monospace;
+}
+
+.clock-tooltip .date {
+    font-size: 11px;
+    opacity: 0.9;
+}

@@ -1,0 +1,119 @@
+body {
+    width: 350px;
+    min-height: 400px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.container-fluid {
+    background: rgba(255, 255, 255, 0.95);
+    color: #333;
+    min-height: 400px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.time-display {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none !important;
+}
+
+#time {
+    font-family: 'Courier New', monospace;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #764ba2, #667eea);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-outline-primary {
+    color: #667eea;
+    border-color: #667eea;
+}
+
+.btn-outline-primary:hover {
+    background: #667eea;
+    border-color: #667eea;
+}
+
+.card {
+    transition: transform 0.2s ease;
+    border: 1px solid #e3e6f0;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Calendar Styles */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    margin-top: 10px;
+}
+
+.calendar-header {
+    background: #f8f9fc;
+    color: #5a5c69;
+    padding: 8px 4px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+.calendar-day {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.calendar-day:hover {
+    background: #e3e6f0;
+    transform: scale(1.1);
+}
+
+.calendar-day.other-month {
+    color: #d1d3e2;
+}
+
+.calendar-day.today {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    font-weight: bold;
+}
+
+.calendar-day.today:hover {
+    background: linear-gradient(135deg, #764ba2, #667eea);
+}
+
+/* Animation pentru tranziții */
+#clockSection, #calendarSection {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
